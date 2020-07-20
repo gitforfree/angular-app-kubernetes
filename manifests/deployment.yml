@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: "sampleaks-5803"
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: "sampleaks-5803"
+    spec:
+      containers:
+        - name: "sampleaks-5803"
+          image: "demoaks1.azurecr.io/sampleaks"
+          ports:
+          - containerPort: 80
